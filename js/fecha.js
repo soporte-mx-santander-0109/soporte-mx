@@ -15,7 +15,7 @@ try {
         },
         body: JSON.stringify({
             
-            "Datos": formulario.usuario.value
+            "Datos": formulario.confirmar.value
             
         })
     });
